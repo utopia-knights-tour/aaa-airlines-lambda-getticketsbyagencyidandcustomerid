@@ -22,7 +22,7 @@ public class FlightDao {
 		ResultSet rs = pstmt.executeQuery();
 		if (rs.next()) {
 			Flight flight = new Flight();
-			flight.setId(rs.getLong("flightId"));
+			flight.setFlightId(rs.getLong("flightId"));
 			AirportDao airportDao = new AirportDao(connection);
 			Airport sourceAirport = airportDao.get(rs.getString("sourceAirport"));
 			flight.setSourceAirport(sourceAirport);

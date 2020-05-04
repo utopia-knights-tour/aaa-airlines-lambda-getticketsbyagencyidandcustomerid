@@ -1,40 +1,40 @@
 package entity;
 
 public class Agency {
-	private Long id;
-	private String name;
-	private String address;
-	private String phone;
+	private Long agencyId;
+	private String agencyName;
+	private String agencyAddress;
+	private String agencyPhone;
 
-	public Long getid() {
-		return id;
+	public Long getAgencyId() {
+		return agencyId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setAgencyId(Long agencyId) {
+		this.agencyId = agencyId;
 	}
 
-	public String getName() {
-		return name;
+	public String getAgencyName() {
+		return agencyName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setAgencyName(String agencyName) {
+		this.agencyName = agencyName;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getAgencyAddress() {
+		return agencyAddress;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setAgencyAddress(String agencyAddress) {
+		this.agencyAddress = agencyAddress;
 	}
 
-	public String getPhone() {
-		return phone;
+	public String getAgencyPhone() {
+		return agencyPhone;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setAgencyPhone(String agencyPhone) {
+		this.agencyPhone = agencyPhone;
 	}
 }
