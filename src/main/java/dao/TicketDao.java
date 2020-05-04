@@ -22,7 +22,7 @@ public class TicketDao {
 
 	public List<Ticket> get(Long agencyId, Long customerId, Long page, Long pageSize) throws SQLException {
 		List<Ticket> tickets = new ArrayList<Ticket>();
-		String sql = "SELECT * FROM Ticket WHERE Ticket.agencyId = ? AND Ticket.customerId = ? AND Ticket.canceled = 0";
+		String sql = "SELECT * FROM Ticket INNER JOIN Flight ON Ticket.flightId = Flight.flightId WHERE Ticket.agencyId = ? AND Ticket.customerId = ? AND Ticket.canceled = 0 HAVING Flight.departureDate > CURDATE()";
 		if (page != null && pageSize != null) {
 			sql += " LIMIT ?,?";
 		}
@@ -36,7 +36,7 @@ public class TicketDao {
 		ResultSet rs = pstmt.executeQuery();
 		while (rs.next()) {
 			Ticket ticket = new Ticket();
-			ticket.setId(rs.getLong("ticketId"));
+			ticket.setTicketId(rs.getLong("ticketId"));
 			CustomerDao customerDao = new CustomerDao(connection);
 			Customer customer = customerDao.get(rs.getLong("customerId"));
 			ticket.setCustomer(customer);

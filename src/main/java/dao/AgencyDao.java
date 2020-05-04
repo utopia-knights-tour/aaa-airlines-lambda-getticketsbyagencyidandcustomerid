@@ -21,10 +21,10 @@ public class AgencyDao {
 		ResultSet rs = pstmt.executeQuery();
 		if (rs.next()) {
 			Agency agency = new Agency();
-			agency.setId(rs.getLong("agencyId"));
-			agency.setName(rs.getString("agencyName"));
-			agency.setAddress(rs.getString("agencyAddress"));
-			agency.setPhone(rs.getString("agencyPhone"));
+			agency.setAgencyId(rs.getLong("agencyId"));
+			agency.setAgencyName(rs.getString("agencyName"));
+			agency.setAgencyAddress(rs.getString("agencyAddress"));
+			agency.setAgencyPhone(rs.getString("agencyPhone"));
 			return agency;
 		}
 		return null;

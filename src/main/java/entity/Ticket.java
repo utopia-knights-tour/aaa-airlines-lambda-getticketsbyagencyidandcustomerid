@@ -1,18 +1,18 @@
 package entity;
 
 public class Ticket {
-	private Long id;
+	private Long ticketId;
 	private Customer customer;
 	private Agency agency;
 	private Flight flight;
 	private Integer canceled;
 
-	public Long getId() {
-		return id;
+	public Long getTicketId() {
+		return ticketId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setTicketId(Long ticketId) {
+		this.ticketId = ticketId;
 	}
 
 	public Customer getCustomer() {

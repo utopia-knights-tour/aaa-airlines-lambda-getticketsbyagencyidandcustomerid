@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Flight {
-	private Long id;
+	private Long flightId;
 	private Airport sourceAirport;
 	private Airport destinationAirport;
 	private LocalDate departureDate;
@@ -15,12 +15,12 @@ public class Flight {
 	private Integer seatsAvailable;
 	private BigDecimal cost;
 
-	public Long getId() {
-		return id;
+	public Long getFlightId() {
+		return flightId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setFlightId(Long flightId) {
+		this.flightId = flightId;
 	}
 
 	public Airport getSourceAirport() {
